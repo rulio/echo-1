@@ -1,0 +1,26 @@
+{
+  "name": "echo",
+  "version": "1.0.0",
+  "description": "Simple URL echoing service, used for testing deployments",
+  "main": "index.js",
+  "scripts": {
+    "start": "micro -p ${PORT:-3000}",
+    "dev": "nodemon -x micro -p ${PORT:-3000}"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drhayes/echo.git"
+  },
+  "author": "David Hayes <drhayes@gmail.com> (http://drhayes.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/drhayes/echo/issues"
+  },
+  "homepage": "https://github.com/drhayes/echo#readme",
+  "dependencies": {
+    "micro": "9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "1.14.11"
+  }
+}
