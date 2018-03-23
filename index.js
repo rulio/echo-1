@@ -1,4 +1,7 @@
 module.exports = (req, res) => {
-  const data = { ...req.headers };
+  var data = {};
+  Object.keys(req.headers).forEach(function(key){
+    data[key] = req.headers[key]
+  })
   return data;
 }
