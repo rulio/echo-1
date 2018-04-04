@@ -4,5 +4,8 @@ module.exports = (req, res) => {
   Object.keys(req.headers).forEach(function(key){
     data[key] = req.headers[key]
   })
-  res.end(JSON.stringify(data)) ;
+  if(data.hasOwnProperty('host') && req.headers.hasOwnProperty('x-forwarded-host')){
+    data['host'] = req.headers['x-forwarded-host'];
+  }
+  res.end(JSON.stringify(data));
 }
