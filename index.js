@@ -7,5 +7,6 @@ module.exports = (req, res) => {
   if(data.hasOwnProperty('host') && req.headers.hasOwnProperty('x-forwarded-host')){
     data['host'] = req.headers['x-forwarded-host'];
   }
+  console.log(JSON.stringify(data))
   res.end(JSON.stringify(data));
 }
